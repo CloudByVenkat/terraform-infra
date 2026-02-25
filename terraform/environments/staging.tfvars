@@ -1,0 +1,18 @@
+# Day 22: Staging Environment Configuration
+
+project_name = "cicdemo"
+environment  = "staging"
+location     = "East US"
+
+# Networking
+vnet_address_space = ["10.1.0.0/16"]
+
+# Metadata
+owner_email = "opsed@company.com"
+cost_center = "IT-Operations"
+git_repo    = "https://github.com/yourorg/terraform-infra"
+
+# Feature flags (staging environment)
+enable_advanced_threat_protection = true
+enable_ddos_protection            = false
+enable_private_endpoints          = true
