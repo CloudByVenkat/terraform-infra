@@ -1,5 +1,4 @@
 # Day 22: Main Infrastructure Configuration for CI/CD
-# Reuses modules from previous days (Day 14-21) in a pipeline
 
 # Random suffix for unique resource names
 resource "random_string" "unique" {
@@ -9,7 +8,7 @@ resource "random_string" "unique" {
 }
 
 # ═══════════════════════════════════════════════════════════════
-# MODULE 1: Resource Group (from Day 16)
+# MODULE 1: Resource Group
 # ═══════════════════════════════════════════════════════════════
 module "resource_group" {
   source = "./modules/resource-group"
@@ -21,7 +20,7 @@ module "resource_group" {
 }
 
 # ═══════════════════════════════════════════════════════════════
-# MODULE 2: Networking (VNet, Subnets) - from Day 15
+# MODULE 2: Networking (VNet, Subnets)
 # ═══════════════════════════════════════════════════════════════
 module "networking" {
   source = "./modules/networking"
@@ -51,7 +50,7 @@ module "networking" {
 }
 
 # ═══════════════════════════════════════════════════════════════
-# MODULE 3: Key Vault with RBAC (from Day 17)
+# MODULE 3: Key Vault with RBAC
 # ═══════════════════════════════════════════════════════════════
 module "key_vault" {
   source = "./modules/key-vault"
@@ -71,7 +70,7 @@ module "key_vault" {
 }
 
 # ═══════════════════════════════════════════════════════════════
-# MODULE 4: SQL Database with Auto-scaling (from Day 16)
+# MODULE 4: SQL Database with Auto-scaling
 # ═══════════════════════════════════════════════════════════════
 module "sql_database" {
   source = "./modules/sql-database"
@@ -96,7 +95,7 @@ module "sql_database" {
 }
 
 # ═══════════════════════════════════════════════════════════════
-# MODULE 5: App Service with auto-scaling (from Day 16)
+# MODULE 5: App Service with auto-scaling
 # ═══════════════════════════════════════════════════════════════
 module "app_service" {
   source = "./modules/app-service"
@@ -125,7 +124,7 @@ module "app_service" {
 }
 
 # ═══════════════════════════════════════════════════════════════
-# MODULE 6: Monitoring (from Day 16)
+# MODULE 6: Monitoring
 # ═══════════════════════════════════════════════════════════════
 module "monitoring" {
   source = "./modules/monitoring"
@@ -146,7 +145,7 @@ module "monitoring" {
 }
 
 # ═══════════════════════════════════════════════════════════════
-# MODULE 7: Storage Account (from Day 15)
+# MODULE 7: Storage Account
 # ═══════════════════════════════════════════════════════════════
 module "storage_account" {
   source = "./modules/storage-account"
