@@ -2,15 +2,15 @@
 
 project_name = "cicdemo"
 environment  = "staging"
-location     = "East US"
+location     = "Canada Central"
 
 # Networking
 vnet_address_space = ["10.1.0.0/16"]
 
 # Metadata
-owner_email = "opsed@company.com"
+owner_email = "svundela@cloudbyvenkat.com"
 cost_center = "IT-Operations"
-git_repo    = "https://github.com/yourorg/terraform-infra"
+git_repo    = "https://github.com/cloudbyvenkat/terraform-infra"
 
 # Feature flags (staging environment)
 enable_advanced_threat_protection = true
