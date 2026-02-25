@@ -2,7 +2,7 @@
 
 project_name = "cicdemo"
 environment  = "production"
-location     = "East US"
+location     = "Canada Central"
 
 # Networking
 vnet_address_space = ["10.2.0.0/16"]
