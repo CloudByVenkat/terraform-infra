@@ -1,21 +1,6 @@
 # Day 22: Backend Configuration for CI/CD
 # This file configures remote state storage in Azure Storage
-
-terraform {
-  required_version = ">= 1.6.0"
-  
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 3.0"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.0"
-    }
-  }
-
-  # Backend configuration
+# Backend configuration
   # Values passed via CLI in pipeline: -backend-config flags
   backend "azurerm" {
     # resource_group_name  = "rg-terraform-state"      # Passed via pipeline
